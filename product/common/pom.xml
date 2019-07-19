@@ -4,22 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.yong</groupId>
-        <artifactId>sell</artifactId>
+        <artifactId>product</artifactId>
         <version>1.0.0-sell</version>
     </parent>
-    <artifactId>eureka</artifactId>
-    <name>eureka</name>
+    <artifactId>product-common</artifactId>
+    <name>common</name>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

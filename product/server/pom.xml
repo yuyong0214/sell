@@ -4,17 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.yong</groupId>
-        <artifactId>sell</artifactId>
+        <artifactId>product</artifactId>
         <version>1.0.0-sell</version>
     </parent>
-    <artifactId>order</artifactId>
-    <name>order</name>
+    <artifactId>product-server</artifactId>
+    <name>server</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -24,10 +20,15 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-            <version>5.1.47</version>
+            <version>5.1.38</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -35,30 +36,14 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-            <version>1.4.7.RELEASE</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.yong</groupId>
-            <artifactId>product-client</artifactId>
+            <artifactId>product-common</artifactId>
             <version>1.0.0-sell</version>
         </dependency>
     </dependencies>
-
 </project>

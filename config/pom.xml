@@ -7,13 +7,17 @@
         <artifactId>sell</artifactId>
         <version>1.0.0-sell</version>
     </parent>
-    <artifactId>eureka</artifactId>
-    <name>eureka</name>
+    <artifactId>config</artifactId>
+    <name>config</name>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <dependency>
@@ -22,4 +26,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 </project>

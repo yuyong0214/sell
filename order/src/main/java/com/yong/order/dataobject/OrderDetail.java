@@ -12,12 +12,23 @@ import java.util.Date;
 public class OrderDetail {
     @Id
     private String detailId;
-    private String OrderId;
+    /** 订单id. */
+    private String orderId;
+
+    /** 商品id. */
     private String productId;
+
+    /** 商品名称. */
     private String productName;
+
+    /** 商品单价. */
     private BigDecimal productPrice;
+
+    /** 商品数量. */
     private Integer productQuantity;
-    private String ProductIcon;
+
+    /** 商品小图. */
+    private String productIcon;
     private Date createTime;
     private Date updateTime;
 

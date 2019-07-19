@@ -1,13 +1,10 @@
 package com.yong.order.controller;
 
-import com.yong.order.client.ProductClient;
 import com.yong.order.dataobject.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -23,8 +20,8 @@ public class ClientController {
     private LoadBalancerClient loadBalancerClient;
     @Autowired
     private RestTemplate restTemplate;
-    @Autowired
-    private ProductClient productClient;
+//    @Autowired
+//    private ProductClient productClient;
 
     @GetMapping("/getProductMsg")
     public String getProductMsg() {
@@ -44,16 +41,17 @@ public class ClientController {
         // 值得注意的是第二种和第三种会进行负载均衡的策略
         //String response = restTemplate.getForObject("http://PRODUCT/msg", String.class);
 
-        String response = productClient.productMsg();
-        log.info("product msg is = " + response);
-        return response;
+       // String response = productClient.productMsg();
+        //log.info("product msg is = " + response);
+        //return response;
+        return "abc";
     }
 
-    @RequestMapping("/getProductList")
-    public List<ProductInfo> getProductList() {
-        System.out.println(123);
-        List<ProductInfo> listForOrder = productClient.ListForOrder(Arrays.asList("157875196366160022", "157875227953464068"));
-        log.info("list = "+listForOrder);
-        return listForOrder;
-    }
+//    @RequestMapping("/getProductList")
+//    public List<ProductInfo> getProductList() {
+//        System.out.println(123);
+//        List<ProductInfo> listForOrder = productClient.ListForOrder(Arrays.asList("157875196366160022", "157875227953464068"));
+//        log.info("list = "+listForOrder);
+//        return listForOrder;
+//    }
 }
